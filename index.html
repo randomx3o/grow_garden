@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grow garden</title>
+    <style>
+        @font-face {
+            font-family: tech;
+            src: url(./ShareTechMono-Regular.ttf);
+        }
+
+        body {
+            font-family: tech;
+            margin: 0 auto;
+            text-align: center;
+            background-color: fff;
+        }
+
+        #main_box_holder {
+            width: 85%;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        #main_box {
+            width: 95%;
+            height: auto;
+            background-color: #fff;
+        }
+        
+        button.tab {
+            border-radius: 0px;
+            border-style: solid;
+            background-color: #eee;
+            width: 25%;
+        }
+
+        button.tab:hover {
+            border-radius: 0px;
+            border-style: solid;
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function main_box(key) {
+            if (key == 'default') {
+                document.getElementById('main_box').innerHTML = '<h2>what is grow garden?</h2><hr><h3>grow garden is stratagy game that uses python as you can guess it is about growing plants and makeing a large sum of money.<hr>for this game to work you will need to download <a href="https://www.python.org/downloads/">python</a> but you can also play an online version at <a href="https://replit.com/@randomx1o">replit</a><br>you can download the lateist version here <a href="./">download</a><br>you can also view the code on <a href="https://github.com/randomx3o/grow_garden#grow-garden">GitHub</a></h3>'
+            }else if (key == 'how_to_play') {
+                document.getElementById('main_box').innerHTML = '<h2>how to play?</h2><hr><h3>first setup the game you can download here  <a href="./">download</a> or use <a href="https://replit.com/@randomx1o">replit</a><br>notice if you are downloading you will need to install <a href="https://www.python.org/downloads/">python</a><br>also research the dangers of python i am not liable for any damege, run at your own risk you can alawys run the online version on replit with no majour game play missing apart from saveing</h3>'
+            }else if (key == 'downloads') {
+                document.getElementById('main_box').innerHTML = '<h2>downloads</h2><hr><h3><a href="./">grow_garden_v.1.0.1</a></h3>'
+            }else if (key == 'about_me') {
+                document.getElementById('main_box').innerHTML = '<h2>about me</h2><hr><h3>Hello i am a developer from england my alis is randomx3o but i also go by randmx1o,randmx2o<br>I made this game to practice my python skills thogh my main area of expertise is java script and html<br><br>to contact me please email me <a href="mailto:webmaster@randomx3o.dev@gmail.com">randomx3o.dev@gmail.com</a></h3>'
+            }
+        }
+
+
+        onload = function start() {
+            main_box('default')
+        }
+
+    </script>
+    <h1>welcome to grow garden</h1>
+    <div id="main_box_holder">
+        <button class="tab" onclick="main_box('default');">home</button><button class="tab" onclick="main_box('how_to_play');">how to play</button><button class="tab" onclick="main_box('downloads');">downloads</button><button class="tab" onclick="main_box('about_me');">about me</button>
+        <div id="main_box">
+            <noscript>please enable java script</noscript>
+        </div>
+    </div>
+</body>
+</html>
